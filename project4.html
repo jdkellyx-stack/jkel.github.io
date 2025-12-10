@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tabs Demo</title>
+    <link rel="stylesheet" href="project4.css">
+</head>
+<body>
+    <div class="container">
+    <h1>About Me! Hello, I'm <span id="userName"></span></h1>
+        
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('Basics')">Basics</button>
+            <button class="tab-button" onclick="openTab('Personal')">Personal</button>
+            <button class="tab-button" onclick="openTab('Academics')">Academics</button>
+            <button class="tab-button" onclick="openTab('Miscellaneous')">Miscellaneous</button>
+        </div>
+
+        <div class="tab-content" id="Basics">
+            <ol>
+                <li>Name: John Kelly</li>
+                <li>Age: 19</li>
+                <li>Hometown: Orinda, CA</li>
+                <li>Year: Sophmore</li>
+            </ol>
+        </div>
+
+        <div class="tab-content" id="Personal" style="display: none;">
+            <p>I was born on March 20th, 2006</p>
+            <p>I have two dogs named Muggsy and Rufus, pictured below</p>
+            <p>I have one sister, she graduated from UCSC</p>
+            <img src="dogs.jpeg" alt="Picture of my dogs Muggsy and Rufus" class="dogs">
+        </div>
+
+        <div class="tab-content" id="Academics" style="display: none;">
+            <ul>
+                <li>3.3 CGPA</li>
+                <li>3.65 MGPA</li>
+                <li>Psychology major</li>
+                <li>Hoping to improve both scores</li>
+            </ul>
+        </div>
+
+        <div class="tab-content" id="Miscellaneous" style="display: none;">
+            <p>My favorite food is pizza</p>
+            <p>My favorite hobby is playing football</p>
+            <p>My favorite TV show is Parks and Recreation</p>
+        </div>
+    </div>
+<footer>email: jdkellyx@gmail.com Phone #: 925-494-8232</footer>
+    <script src="project4.js"></script>
+</body>
+</html>
