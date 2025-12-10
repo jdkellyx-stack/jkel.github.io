@@ -1,43 +1,54 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tabs Demo</title>
+    <link rel="stylesheet" href="project4.css">
+</head>
+<body>
+    <div class="container">
+    <h1>About Me! Hello, I'm <span id="userName"></span></h1>
+        
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('Basics')">Basics</button>
+            <button class="tab-button" onclick="openTab('Personal')">Personal</button>
+            <button class="tab-button" onclick="openTab('Academics')">Academics</button>
+            <button class="tab-button" onclick="openTab('Miscellaneous')">Miscellaneous</button>
+        </div>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+        <div class="tab-content" id="Basics">
+            <ol>
+                <li>Name: John Kelly</li>
+                <li>Age: 19</li>
+                <li>Hometown: Orinda, CA</li>
+                <li>Year: Sophmore</li>
+            </ol>
+        </div>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        <div class="tab-content" id="Personal" style="display: none;">
+            <p>I was born on March 20th, 2006</p>
+            <p>I have two dogs named Muggsy and Rufus, pictured below</p>
+            <p>I have one sister, she graduated from UCSC</p>
+            <img src="dogs.jpeg" alt="Picture of my dogs Muggsy and Rufus" class="dogs">
+        </div>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        <div class="tab-content" id="Academics" style="display: none;">
+            <ul>
+                <li>3.3 CGPA</li>
+                <li>3.65 MGPA</li>
+                <li>Psychology major</li>
+                <li>Hoping to improve both scores</li>
+            </ul>
+        </div>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        <div class="tab-content" id="Miscellaneous" style="display: none;">
+            <p>My favorite food is pizza</p>
+            <p>My favorite hobby is playing football</p>
+            <p>My favorite TV show is Parks and Recreation</p>
+        </div>
+    </div>
+<footer>email: jdkellyx@gmail.com Phone #: 925-494-8232</footer>
+    <script src="project4.js"></script>
+</body>
+</html>
